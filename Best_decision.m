@@ -31,8 +31,7 @@ for i = 1:No_attri
 end
 
 %Calculate the information gain
-Gain = zeros(1,No_attri);
-Gain = ones(1,No_attri)*E_example - Remainder
+Gain = ones(1,No_attri)*E_example - Remainder;
 [max_gain, max_index] = max(Gain);
 best_attri = all_attri(max_index);
 end
