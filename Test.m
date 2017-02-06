@@ -9,9 +9,12 @@ y_surp=y_to_BinaryTargets(y,6);
 
 %test for the 'Best_decision' function
 all_attri = linspace(1,45,45);
-best_attri = Best_decision(x, all_attri, y_fear);
-fprintf('The best attribute for `fear` is the %dth attribute\n', best_attri);
+%best_attri = Best_decision(x, all_attri, y_ange);
+%fprintf('The best attribute for `ange` is the %dth attribute\n', best_attri);
 
 %test for the 'Majority_value' function
-major_val = Majority_value(y_fear);
-fprintf('The majority y value for `fear` is %d\n', major_val);
+%major_val = Majority_value(y_fear);
+%fprintf('The majority y value for `fear` is %d\n', major_val);
+
+tree = decision_tree_learning(x, all_attri, y_ange);
+DrawDecisionTree(tree,'Anger');
