@@ -32,7 +32,9 @@ else
             %remove best_attri from attri_i
             attri_i(:,attri==best_attri) = [];
             %find the subtree by recursive call of the function
-            tree.kids{i+1} = decision_tree_learning(examples_i, attri_i, binary_targets_i);
+            tree.kids{i+1} = decision_tree_learning(examples_i,...
+            attri_i,...
+            binary_targets_i);
         end
     end
 end
