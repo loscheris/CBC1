@@ -18,11 +18,11 @@ for i = 1:No_attri
     n1=0;
     p1=0;
     for j = 1:No_examples
-        if (examples(j,col)==1 & binary_targets(j)==1)
+        if (examples(j,col)==1 && binary_targets(j)==1)
             p1 = p1+1;
-        elseif (examples(j,col)==1 & binary_targets(j)==0)
+        elseif (examples(j,col)==1 && binary_targets(j)==0)
             n1 = n1+1;
-        elseif (examples(j,col)==0 & binary_targets(j)==1)
+        elseif (examples(j,col)==0 && binary_targets(j)==1)
             p0 = p0+1;
         else
             n0 = n0+1;

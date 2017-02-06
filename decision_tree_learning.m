@@ -30,8 +30,7 @@ else
             %copy attri (since attri will need to be used twice)
             attri_i = attri;
             %remove best_attri from attri_i
-            best_attri_index = find(attri==best_attri);
-            attri_i(:,best_attri_index) = [];
+            attri_i(:,attri==best_attri) = [];
             %find the subtree by recursive call of the function
             tree.kids{i+1} = decision_tree_learning(examples_i, attri_i, binary_targets_i);
         end
